@@ -1,51 +1,62 @@
-/* 全体の設定 */
+/* --- 全体の基本設定 --- */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, sans-serif;
     background-color: #000;
     color: #fff;
     height: 100vh;
     overflow: hidden;
 }
 
-.dark-theme {
-    background-color: #000;
+/* --- 【修正】スクロールバーをダークに馴染ませる --- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+    background: #333; /* 暗いグレー */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
 }
 
-/* アプリ全体のレイアウト */
+/* --- レイアウト --- */
 .app-container {
     display: flex;
     height: 100vh;
 }
 
-/* 左側サイドバー */
 .sidebar {
     width: 280px;
     background-color: #0A0A0A;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    border-right: 1px solid #1a1a1a;
+    box-sizing: border-box;
 }
 
 .search-container input {
     width: 100%;
-    height: 45px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 40px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
     border-radius: 8px;
     color: #fff;
-    padding: 0 15px;
+    padding: 0 12px;
     box-sizing: border-box;
-    font-size: 14px;
 }
 
 .section-title {
     font-size: 10px;
-    color: rgba(255, 255, 255, 0.24);
+    color: #444;
     margin: 15px 0 10px 0;
     letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .ranking-list {
@@ -57,13 +68,13 @@ body {
 }
 
 .ranking-item {
-    padding: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 12px 10px;
+    border-bottom: 1px solid #111;
     cursor: pointer;
 }
 
 .ranking-item:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #111;
 }
 
 .char-name {
@@ -73,10 +84,10 @@ body {
 
 .char-score {
     font-size: 11px;
-    color: rgba(255, 255, 255, 0.54);
+    color: #666;
 }
 
-/* 右側メインコンテンツ */
+/* --- メインコンテンツ --- */
 .main-content {
     flex-grow: 1;
     display: flex;
@@ -86,132 +97,103 @@ body {
 .main-header {
     display: flex;
     justify-content: flex-end;
-    padding: 20px 30px 0 0;
+    padding: 15px 25px;
 }
 
 .icon-btn {
     background: none;
     border: none;
-    color: #fff;
-    font-size: 20px;
+    color: #444;
+    font-size: 18px;
     cursor: pointer;
 }
 
-/* VSエリア */
 .vs-container {
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 40px;
 }
 
-.team {
-    display: flex;
-    gap: 20px;
-}
-
+.team { display: flex; gap: 20px; }
 .vs-text {
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.05);
-    margin: 0 40px;
+    color: #0a0a0a;
+    margin: 0 30px;
 }
 
 .column-title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 900;
     margin-bottom: 10px;
     text-align: center;
 }
 
-.slots-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+.slots-container { display: flex; flex-direction: column; gap: 12px; }
 
-/* スロットの基本デザイン (NORMAL_BORDER) */
 .slot {
-    width: 110px;
-    height: 110px;
-    border: 2px solid rgba(255, 255, 255, 0.15); /* FletのWHITE24相当 */
-    border-radius: 12px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #1a1a1a;
+    font-size: 28px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.1); /* ?の色 */
-    font-size: 36px;
-    background-color: transparent;
-    transition: all 0.1s ease; /* アニメーション */
+    transition: 0.2s;
 }
 
-/* BANスロットは小さい */
-.slot-ban {
-    width: 55px;
-    height: 55px;
-    font-size: 18px;
-}
+.slot-ban { width: 50px; height: 50px; font-size: 16px; }
 
-/* アクティブなスロット (ACTIVE_BORDER) */
 .slot.active {
-    border: 5px solid #fff;
-    background-color: rgba(255, 255, 255, 0.05); /* WHITE10相当 */
-    color: rgba(255, 255, 255, 0.1);
+    border: 4px solid #fff;
+    background-color: #0a0a0a;
 }
 
-/* キャラが選択された後のスロット */
-.slot.selected {
-    color: #fff;
-    font-size: 14px;
-}
+.slot.selected { color: #fff; font-size: 13px; border-color: #333; }
+.slot-ban.selected { font-size: 9px; }
 
-.slot-ban.selected {
-    font-size: 10px;
-}
-
-/* フッター */
+/* --- フッター --- */
 .main-footer {
-    height: 160px;
-    background-color: #0D0D0D;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    height: 140px;
+    background-color: #080808;
+    border-top: 1px solid #1a1a1a;
     display: flex;
 }
 
 .settings-panel {
-    width: 300px;
+    width: 280px;
     padding: 20px;
-    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    border-right: 1px solid #1a1a1a;
 }
 
-.setting-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
+.setting-row { display: flex; align-items: center; margin-bottom: 10px; }
+.setting-row label { width: 50px; font-size: 10px; color: #444; font-weight: bold; }
 
-.setting-row label {
-    width: 60px;
-    font-size: 12px;
-}
-
+/* --- 【重要：修正】ドロップダウンの白背景対策 --- */
 .setting-row select {
-    width: 200px;
-    height: 45px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    color: #fff;
-    padding: 0 10px;
+    width: 180px;
+    height: 38px;
+    background-color: #111; /* 背景を黒く */
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #fff;            /* 文字を白く */
+    padding: 0 8px;
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+    /* OS標準のデザインを一部上書き */
+    color-scheme: dark;
 }
 
-.history-panel {
-    flex-grow: 1;
-    padding: 20px;
+/* 展開した時の選択肢（option） */
+.setting-row select option {
+    background-color: #111 !important;
+    color: #fff !important;
 }
 
-.history-text {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.7);
-}
+.history-panel { flex-grow: 1; padding: 20px; }
+.history-text { font-size: 11px; color: #444; line-height: 1.4; }
