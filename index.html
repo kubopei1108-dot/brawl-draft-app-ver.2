@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brawl Draft App JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="search-container">
+                <input type="text" id="search-field" placeholder="Search...">
+            </div>
+            <div class="section-title">RECOMMENDED</div>
+            <ul id="ranking-list" class="ranking-list">
+                </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <button id="refresh-btn" class="icon-btn">↻</button>
+            </header>
+
+            <div class="vs-container">
+                <div class="team team-先攻">
+                    <div class="ban-column">
+                        <div class="column-title">BAN</div>
+                        <div class="slots-container" id="slots-先攻-ban"></div>
+                    </div>
+                    <div class="pick-column">
+                        <div class="column-title">先攻</div>
+                        <div class="slots-container" id="slots-先攻-pick"></div>
+                    </div>
+                </div>
+
+                <div class="vs-text">VS</div>
+
+                <div class="team team-後攻">
+                    <div class="pick-column">
+                        <div class="column-title">後攻</div>
+                        <div class="slots-container" id="slots-後攻-pick"></div>
+                    </div>
+                    <div class="ban-column">
+                        <div class="column-title">BAN</div>
+                        <div class="slots-container" id="slots-後攻-ban"></div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="main-footer">
+                <div class="settings-panel">
+                    <div class="setting-row">
+                        <label>MODE</label>
+                        <select disabled><option>Ranked</option></select>
+                    </div>
+                    <div class="setting-row">
+                        <label>MAP</label>
+                        <select id="map-dropdown">
+                            <option value="選択なし">Select Map</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="history-panel">
+                    <div class="section-title">HISTORY</div>
+                    <div id="selection-history" class="history-text"></div>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

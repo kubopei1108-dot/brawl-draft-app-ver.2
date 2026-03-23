@@ -1,0 +1,217 @@
+/* 全体の設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dark-theme {
+    background-color: #000;
+}
+
+/* アプリ全体のレイアウト */
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 左側サイドバー */
+.sidebar {
+    width: 280px;
+    background-color: #0A0A0A;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.search-container input {
+    width: 100%;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.section-title {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.24);
+    margin: 15px 0 10px 0;
+    letter-spacing: 1px;
+}
+
+.ranking-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.ranking-item {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.ranking-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.char-name {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.char-score {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.54);
+}
+
+/* 右側メインコンテンツ */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px 0 0;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* VSエリア */
+.vs-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.team {
+    display: flex;
+    gap: 20px;
+}
+
+.vs-text {
+    font-size: 80px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.05);
+    margin: 0 40px;
+}
+
+.column-title {
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.slots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* スロットの基本デザイン (NORMAL_BORDER) */
+.slot {
+    width: 110px;
+    height: 110px;
+    border: 2px solid rgba(255, 255, 255, 0.15); /* FletのWHITE24相当 */
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.1); /* ?の色 */
+    font-size: 36px;
+    background-color: transparent;
+    transition: all 0.1s ease; /* アニメーション */
+}
+
+/* BANスロットは小さい */
+.slot-ban {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+}
+
+/* アクティブなスロット (ACTIVE_BORDER) */
+.slot.active {
+    border: 5px solid #fff;
+    background-color: rgba(255, 255, 255, 0.05); /* WHITE10相当 */
+    color: rgba(255, 255, 255, 0.1);
+}
+
+/* キャラが選択された後のスロット */
+.slot.selected {
+    color: #fff;
+    font-size: 14px;
+}
+
+.slot-ban.selected {
+    font-size: 10px;
+}
+
+/* フッター */
+.main-footer {
+    height: 160px;
+    background-color: #0D0D0D;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+}
+
+.settings-panel {
+    width: 300px;
+    padding: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.setting-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.setting-row label {
+    width: 60px;
+    font-size: 12px;
+}
+
+.setting-row select {
+    width: 200px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    padding: 0 10px;
+}
+
+.history-panel {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.history-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}

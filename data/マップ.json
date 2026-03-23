@@ -1,0 +1,167 @@
+{
+  "sheetName": "マップ",
+  "values": [
+    [
+      "ID",
+      "マップ名",
+      "モード",
+      "GEM GRAB"
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000007.png",
+      "Hard Rock Mine",
+      "GEM GRAB",
+      "BRAWL BALL"
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000115.png",
+      "Double Swoosh",
+      "GEM GRAB",
+      "KNOCKOUT"
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000010.png",
+      "Gem Fort",
+      "GEM GRAB",
+      "HOT ZONE"
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000011.png",
+      "Undermine",
+      "GEM GRAB",
+      "BOUNTY"
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000050.png",
+      "Sneaky Fields",
+      "BRAWL BALL",
+      "HEIST"
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000132.png",
+      "Center Stage",
+      "BRAWL BALL",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000025.png",
+      "Triple Dribble",
+      "BRAWL BALL",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000118.png",
+      "Pinball Dreams",
+      "BRAWL BALL",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000703.png",
+      "New Horizons",
+      "KNOCKOUT",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000548.png",
+      "Out in the Open",
+      "KNOCKOUT",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000440.png",
+      "Flaring Phoenix",
+      "KNOCKOUT",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000368.png",
+      "Belle's Rock",
+      "KNOCKOUT",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000306.png",
+      "Dueling Beetles",
+      "HOT ZONE",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000300.png",
+      "Ring of Fire",
+      "HOT ZONE",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000293.png",
+      "Parallel Plays",
+      "HOT ZONE",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000292.png",
+      "Open Business",
+      "HOT ZONE",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000005.png",
+      "Shooting Star",
+      "BOUNTY",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000082.png",
+      "Layer Cake",
+      "BOUNTY",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000022.png",
+      "Hideout",
+      "BOUNTY",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000083.png",
+      "Dry Season",
+      "BOUNTY",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000053.png",
+      "Hot Potato",
+      "HEIST",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000019.png",
+      "Safe Zone",
+      "HEIST",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000072.png",
+      "Bridge Too Far",
+      "HEIST",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000018.png",
+      "Kaboom Canyon",
+      "HEIST",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000886.png",
+      "Safe(r) Zone",
+      "HEIST",
+      ""
+    ],
+    [
+      "https://cdn.brawlify.com/maps/regular/15000137.png",
+      "Pit Stop",
+      "HEIST",
+      ""
+    ]
+  ]
+}
